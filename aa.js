@@ -3,9 +3,11 @@ const crypto= require('crypto');
 const pdfkit = require('pdfkit');
 const fs = require('fs');
 const app = express();
+const cors = require('cors');
 
 app.use(express.json());
 app.use(express.static('./pdfs'));
+app.use(cors());
 
 
 app.post('/',(req,res)=>{
